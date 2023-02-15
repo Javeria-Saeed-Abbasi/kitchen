@@ -24,7 +24,18 @@ jQuery(function ($) {
       }, 700);
       return false;
    });
-  });   
+  }); 
+
+
+  window.onscroll = function() {
+    const button = document.querySelector(".sticky-btns");
+    if (window.pageYOffset >= 200) {
+      button.classList.add("sticky");
+    } else {
+      button.classList.remove("sticky");
+    }
+  };
+   
 $(document).ready(function(){
     $(".navbar .dropdown").hover(function() {
       $(this).find(".dropdown-toggle").dropdown("toggle");
